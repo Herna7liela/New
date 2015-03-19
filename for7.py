@@ -3,18 +3,11 @@
 
 a = int(input("Enter number: "))
 b = int(input("Enter number: "))
-total = 0
+total = a
 
-while a <= b:
+if a <= b:
     for i in range(a, b):
-        total = i +1
+        total = total + i
     print (total)
 
 
-#i=int(input(“enter first number”)
-#b=int(input(“enter second number”)
-#total = 0
-#while i<=b:
-#total = tptal +i
-#i=i+1
-#print(total)
