@@ -11,10 +11,13 @@ while name != "":
             aname = name
         if "othername" > "name":    
             bname = name
+            
+print (aname)
+print (bname)
         ##else:
             #shortest = 
 ##else:
-            #longest = 
+            #longest = can use the length len() to determine this
         
     
 #print (sort(name))               
