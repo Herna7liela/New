@@ -42,4 +42,21 @@ for i in range(len(reverse)):
     
     
 print (rna)
+
+print (reverse.replace("T","U"))
     
+# now to print 3 characters at a time
+
+# calculate how many G's in rna
+countG = 0
+for i in range(len(rna)):
+    if rna[i] == "G":        # can extend this condition to more than one type of nucleotide
+        countG = countG + 1
+    
+print ("There are ",countG, "G's")
+
+#print ("The length of my seq is ", countA + countT + countG + countC)
+print ("The length of my seq is ", len(rna))
+#print ("The GC ratio of my seq is ", (countG+countC)/len(rna))
+# or can create a variable for GC ratio:
+# GC_ratio = (countG+countC)/len(rna)
