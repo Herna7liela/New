@@ -10,9 +10,21 @@ while numbers != "":
     numbers = int(numbers)
     total = total + numbers
     count = count + 1
-    
     numbers = input("enter numbers ")
-
+  
 average = (total/count)
-        
 print (average)
+
+question = input("Do you want to repeat?(Yes/No) ")     
+if question == "Yes":
+    numbers = input("enter numbers ")
+    while numbers != "":
+        numbers = int(numbers)
+        total = total + numbers
+        count = count + 1
+        numbers = input("enter numbers ")    
+    print (average)
+elif question == "No":
+    print ("Process Terminated")
+    
+    
