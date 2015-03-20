@@ -18,6 +18,6 @@ while numfloats != "":
 
 nummean = (total/count)
 numsum = total        
-print (nummean)
-print (numsum)  
+print ("The mean of the entered floats are ", nummean)
+print ("The sum of the entered floats are ", numsum)  
         
