@@ -5,15 +5,18 @@
 
 
 # because e is the sum of 1/factorial of a number n, I used the previous questions code.
-number = float(input("Enter number to calculate contant e of: "))
+number = int(input("Enter number to calculate contant e of: "))
 fac = 1
 i = 0
+acc = 0
 while number != "":
     for i in range(1,number,1):
         fac = fac*i
         print(fac)
     for i in range(1,number,1):
-        print sum(1/float(fac))
+        acc = acc + 1/(i)
+        print (1/float(acc))
+    number = int(input("Enter number to calculate contant e of: "))
         
    
     
