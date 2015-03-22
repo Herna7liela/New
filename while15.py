@@ -32,3 +32,4 @@ for count in range(0:):
 # must put in something so that you can then ask the program to quite after which it
 # will leave the while loop
 # the while loop can only be exited when the condition is not met anymore
+# try out different else positions
