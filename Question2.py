@@ -2,18 +2,16 @@
 # once, for example: The quick brown fox jumps over the lazy dog. Your task here is to
 # write a function to check a sentence to see if it is a pangram or not.
 
+string = input("Enter a sentence: ")
+string = string.lower()
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+empty = ""
+for i in string:
+    if i in alphabet:
+        empty = empty + i
+strlen = len(empty)
+if strlen == len(alphabet):
+    print ("Sentence is a pangram")
+else:
+    print ("Sentence is not a pangram")
 
-
-possible = input("Enter a sentece to check if its a pangram: ")
-
-while possible != "":
-    possible = possible.lower()
-    if possible == set('abcdefghijklmnopqrstuvwxyz'):
-        print ("True")
-    else:
-        print ("False")
-        
-    possible = input("Enter a sentece to check if its a pangram: ")
-    
-    # so this code keeps giving a "False" output with whatever I put in. 
-    # also if I don't use the set() I don't know what else to use
