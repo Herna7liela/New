@@ -9,14 +9,14 @@ number = int(input("Enter number to calculate contant e of: "))
 fac = 1
 i = 0
 acc = 0
-while number != "":
-    for i in range(1,number,1):
+#while number != "":
+for i in range(1,number+1):
         fac = fac*i
-        print(fac)
-    for i in range(1,number,1):
-        acc = acc + 1/(i)
-        print (1/float(acc))
-    number = int(input("Enter number to calculate contant e of: "))
+        #print(fac)
+        for j in range(i):
+                acc = acc + 1/(fac)
+print (acc)
+#number = int(input("Enter number to calculate contant e of: "))
         
    
     
