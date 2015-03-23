@@ -6,11 +6,16 @@ string = input("Enter a sentence: ")
 string = string.lower()
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 empty = ""
+counter = 0
 for i in string:
-    if i in alphabet:
+    if i not in empty:
         empty = empty + i
-strlen = len(empty)
-if strlen == len(alphabet):
+        
+for j in empty:
+    if j in alphabet:
+        counter = counter + 1
+
+if counter == len(alphabet):
     print ("Sentence is a pangram")
 else:
     print ("Sentence is not a pangram")
