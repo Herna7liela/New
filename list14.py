@@ -4,10 +4,14 @@
 #***
 # **
 #  *
-#Enter triangle height: 5
-#*****
-# ****
-#  ***
-#   **
-#    *
-#Enter triangle height: 
+height = int(input("Enter triangle height: "))
+count = height
+space = 0
+# height != "":
+for i in range(1,height+1):
+    #print (i)
+    count = count - 1
+    #print (count*'*')
+    space = space + 1
+    print (' '*space + count*'*')
+    #height = int(input("Enter triangle height: "))

@@ -9,9 +9,14 @@
 
 height = int(input("Enter triangle height: "))
 count = 0
-# while height != "":
+# height != "":
 for i in range(1,height+1):
-        print (i)
-        if i == '*':
+                #print (i)
                 count = count + 1
-                print (count)
+                print (count*'*')
+                #height = int(input("Enter triangle height: "))
+                
+# need to get a way for the loop to keep going until a blank line is entered.
+                
+                                                                                         
+

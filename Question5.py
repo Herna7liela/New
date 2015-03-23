@@ -17,6 +17,15 @@ for i in range(1,number+1):
                 acc = acc + 1/(fac)
 print (acc)
 #number = int(input("Enter number to calculate contant e of: "))
+
+# BEST WAY BELOW
+# number_of_terms = int(input("how many terms? "))
+# total = 1
+# factorial = 1
+# for counter in range(number_of_terms+1):
+# factorial = factorial * (counter + 1)
+#total = total + 1/factorial
+# print("e= ", total)
         
    
     
