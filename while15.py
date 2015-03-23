@@ -20,7 +20,7 @@ numsum = total
 print ("The mean of the entered floats are ", nummean)
 print ("The sum of the entered floats are ", numsum)      
       
-for count in range(0:):           
+for count in range(0:):         
     numfloats = input("Enter a float: ")
 # use same idea as with average2.py, but 
 # figure out a way to keep on repeating the things
