@@ -57,4 +57,7 @@ for grade in grades:
     for item in grade:
         print (item) # this goes inside then inside then inside etc...
         
-        
+# can put this in other words
+for i in range(len(grades)):
+    for j in range(len(grades[i])):
+        print (i,j,grades[i][j])
