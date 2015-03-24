@@ -2,3 +2,6 @@
 # 'subject: symbol', with each subject on a single line.
 
 grades = [('Maths', 'D'), ('Comp Sci', 'B'), ('English', 'C'), ('French', 'A'), ('Science', 'B'), ('History', 'E')]
+
+for grade in grades:
+    print (grade[0],':', grade[1])
