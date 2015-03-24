@@ -3,3 +3,12 @@
 # sure there are the same number of elements in b as in a. Print out the result of the
 # mathematical addition (not concatenation) of the two tuples as a tuple.
 
+number = int(input("Enter a number:"))
+
+while number != '':
+    a = ('number')
+print (a)
+
+
+    
+    
