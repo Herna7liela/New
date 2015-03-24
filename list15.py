@@ -13,12 +13,14 @@
 #   *
 height = int(input("Enter triangle height: "))
 count = 0
-space = height
+space = height 
 # height != "":
 for i in range(1,height+1):
-    #print (i)
     count = count + 1
     space = space - 1
-    #print (count*'*')
-    print (' '*space + count*'*' + count*'*')
-    print (' '*height + '*')
+    print (space*' ' + count*'*', end = "")
+    print ((count-1)*'*' + space*' ')
+    
+    
+print ((height -1 )* " " + '*')
+print ((height -1 )* " " + '*')
