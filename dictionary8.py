@@ -6,11 +6,12 @@ listnames = {''}
 counter = 0
 
 for name in names:
-        listnames = listnames + names
+        listnames = listnames + {names}
         counter = counter + 1
 print (listnames)
 print (counter)
 
+print (listnames[counter])
 # have to enter names
 # then the names have to be in dictionary format
 # then the names can be counted
