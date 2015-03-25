@@ -3,7 +3,8 @@
 # ('Science', 'B'), ('History', 'E')]:
 
 ##Write a program that prints out the subject with the highest mark.
-#Write a program that outputs each subject and the grade symbol in the format 'subject: symbol', with each subject on a single line.
+#Write a program that outputs each subject and the grade symbol in the format 'subject: symbol',
+# with each subject on a single line.
 ## Write a program that prints out a tab separated list of subjects on the first line, and
 # the corresponding grades, also tab separated on the second line.
 

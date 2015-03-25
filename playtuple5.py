@@ -61,3 +61,5 @@ for grade in grades:
 for i in range(len(grades)):
     for j in range(len(grades[i])):
         print (i,j,grades[i][j])
+        
+# can do the grip proble by using the format of the grades

@@ -17,4 +17,4 @@ print (indexsymbols)
 #subsymbol = grades.index('A')
 print grades[3]
 
-# needs more work
+# needs more work but preferrably do not use this type of method.
