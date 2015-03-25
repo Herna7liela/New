@@ -8,5 +8,5 @@
 
 #1.How do you create this set as a dictionary in python?
 
-
+books = {1: "Hitchhiker's Guide to the Galaxy", 2: "The Restaurant at the End of the Universe", 3: "Life, the Universe, and Everything", 4: "So Long, and Thanks for all the Fish!", 5: "Mostly Harmless"}    
    
