@@ -1,0 +1,1 @@
+#5.Write a program the starts by declaring the above dictionary as a literal, then proceeds to switch the keys and values, so that values become keys, and vice versa. Print out the resulting dictionary
