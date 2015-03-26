@@ -11,3 +11,32 @@
 # Similarly the command 'showcomments' causes all customers' names to be displayed, followed
 # by their comments slightly indented. Customer's must be able to enter their names in a case
 # insensitive manner.
+
+# i want to set up a dictionary that is like comments = [name1,name2 ... etc]
+
+question = input("Do you want to enter a comment? (Y/N): ") # must change this so can enter name
+
+while question == "Y":
+    comments = {}
+    comments["name"] = input("Enter customer name: ")
+    name = name.lower()
+    comments["comment"] = input("Enter comment about shop: ")
+    if name in comments: # i want to say that if there exists a specific name in dict then just add to the comment or replace it with newer one, but maybe this should be higher up in code
+        comment = ''
+        comment = comment + "comment"
+    elif name not in comments:
+        comments = {}
+        comments["name"] = input("Enter customer name: ")
+        name = name.lower()
+        comments["comment"] = input("Enter comment about shop: ")        
+    
+    # must get something when a blank comment is added that the previous comment is then kept
+## all questions answers must be entered case insensitively. maybe can store everything as lower case  
+## set up dictionary to contain different parts called names that then contain comments
+## must maybe ask for name first to see if name is already stored in memory
+## if name is there then display previous comment and just replace previous comment
+    ##with new comment about shop
+## if they then enter a blank line then previous comment is preserved
+## else if name is not there then can ask for name and comment
+## ask a question to enter quit after which the program is ended
+## if command showcomments is entered then all the names and comments on printed on the screen
