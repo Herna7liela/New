@@ -53,4 +53,12 @@ answer = []
 for movie in movies:
     # get the actors
     actors =  movie["actors"] # cannot access things in dictionary with numbers
+    if actor_q in actors:
+        print (movie["name"])
+        # or can use the following loop
+    #for actor in actors:
+        #if actor == actor_q:
+            #print (movie["name"])
+            
+    
     
