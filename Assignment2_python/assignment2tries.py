@@ -51,4 +51,7 @@ print (contents)
 for item in contents:
     item = contents.split(' ')
 print (item)   
+
+# now have to get a way to split all the different elements as tabs, spaces and ;
+# find way to get things in dictionaries with each under its own key:value pair
         

@@ -113,7 +113,7 @@ def protID():
                                 print("T protein ID found for the ",gene_name,"was ", gename["ID"])
 # gene_name = (input("Enter a gene name to continue or a blank line to stop: ")).lower()
 protID()         
-
+# cannot get answer here, not sure why -> code has a problem again
         
 # 3. Create a function that receives protein ID and returns the PDB IDs. If the protein doesn’t have PDBs
 # reported, the function should return False. 
