@@ -8,23 +8,47 @@ Q96S42	NODAL	4N1D;	347
 Q15465	SHH	3HO5;3M1N;3MXW;	462"""
 #print (text)
 
-split_text = (text.split("\n"))
-char_list = []
-charlist = ""
+#split_text = (text.split("\n"))
+#char_list = []
+#charlist = ""
 
-for char in split_text:
-    morpho = {}
-    if char != "\t":
-        charlist = charlist + char
-    else:
-        char_list = char_list + [charlist]
-        charlist = ""
-    if charlist != "":
-        char_list = char_list + [charlist]
-    morpho["Entry ID"] = char_list
+#for char in split_text:
+    #morpho = {}
+    #if char != "\t":
+        #charlist = charlist + char
+    #else:
+        #char_list = char_list + [charlist]
+        #charlist = ""
+    #if charlist != "":
+        #char_list = char_list + [charlist]
+    #morpho["Entry ID"] = char_list
     
-print (morpho["Entry ID"])
-    ###########
+#print (morpho["Entry ID"])
+    ############
     
     # maybe can split these things according to the char one in movies and then moving char by char to find a 
     #"\t" or "\t\t" and ";" split it into another key:value pair
+#---------------------------------------------------------------------------------------------------------
+#first step is to create a list based on the new line (\n) delimitter
+    
+#newlist1=text.split("\n") 
+#print(newlist1) 
+
+#listoflists=[]
+
+#for i in newlist1:
+    #listoflists+=[i.split("\t")] 
+    #print(listoflists) #[[],[],[]]
+
+# now have to make a list of dictionaries
+
+for line in text.split():
+    print (line) 
+contents = line.split('\t') 
+    
+print (contents)
+    
+for item in contents:
+    item = contents.split(' ')
+print (item)   
+        

@@ -1,6 +1,3 @@
-# names splitted with spaces
-# pdbs splitted by ;
-
 #go on uniprot and on faq programmatic access to get examples
 
 # have to get this infomation into a structure like that of the movies
@@ -66,101 +63,109 @@ morpho6 = {
 morpho_genes = [morpho1, morpho2, morpho3, morpho4, morpho5, morpho6]
 print (morpho_genes)
 
-max_length = 500
-min_length = ""
+
 # 1. Create a function that returns the protein ID of the shortest protein.
-def shortest(morpho_genes):
-    #while morpho_gene["Length"] < max_length:
-        #min_length = min_length + Length
-        #return min_length
-#print (min_length)
-    #for Length in morpho_genes:
-        #min_length = min("Length")
-        #return min_length
-#print (min_length)
-    for morpho in morpho_genes:
-        length = morpho["Length"]
-        shortest = min(length)
-        if shortest in length:
-            print (morpho["Length"])
-        # have to state here that if the length is the shortest
+#max_length = 500
+#min_length = ""  
+
+def shortest():
+        lengthlist = sorted(morpho_genes, key=lambda i: i['Length'])
+        shortestprotein = lengthlist[0]
+        print("The shortest protein's ID is: ",shortestprotein["ID"])
+shortest()
+
+#def shortest(morpho_genes):  
+        #while morpho_gene["Length"] < max_length:
+                #min_length = min_length + Length
+                #return min_length
+#print (min_length,["Gene_name"])
+        #for Length in morpho_genes:
+            #min_length = min("Length")
+            #return min_length
+    #print (min_length)
+        #for morpho in morpho_genes:
+                #length = morpho["Length"]
+                #shortest = min(length)
+                #if shortest in length:     
+                        #return morpho["ID"]
+#print ("The shortest protein is ", shortest(morpho_genes))
+# the output keeps giving where the function is saved in memory and not any data  
+
 
 
 # 2. Create a function that receives a gene name and returns the protein ID. 
-def protID(gene_name):
-    for morpho in morpho_genes:
-        gene_name = input("Enter a gene name to get it's protein ID: ")
-        if gene_name == morpho["Gene_names"]:
-            return morpho["ID"]
-        print (morpho["ID"])
-        
+#def protID():
+        #for morpho in morpho_genes:
+                #gene_name = input("Enter a gene name to get it's protein ID: ")
+                #if gene_name == morpho["Gene_names"]:
+                        #return morpho["ID"]
+                #print ("The ID corresponding the gene name is: ", ["ID"])
+
+#protID()
+
+def protID():
+        gene_name = (input("Enter a gene name to find its protein ID: ")).lower()
+        gene_list = ""
+        while gene_name != "":
+                for gename in morpho_genes:
+                        gene_list = gename["Gene_names"]
+                        if gene_name in gene_list:
+                                print("T protein ID found for the ",gene_name,"was ", gename["ID"])
+# gene_name = (input("Enter a gene name to continue or a blank line to stop: ")).lower()
+protID()         
+
         
 # 3. Create a function that receives protein ID and returns the PDB IDs. If the protein doesn’t have PDBs
 # reported, the function should return False. 
-def pdbID(protID):
-    for morpho in morpho_genes:
-        protID = input("Enter the protein ID to find its PDB ID: ")
-        if morpho["PDB"] != "" in protID:
-            print (morpho["PDB"])
+#def pdbID(protID):
+        #for morpho in morpho_genes:
+                #protID = input("Enter the protein ID to find its PDB ID: ")
+                #if morpho["PDB"] != "" in protID:
+                        #return morpho["PDB"]
+                #else:
+                        #return False
+#print (['PDB'], "if protein with ID ", pdbID(protID), "has PDB")
+
+def pdbID():
+        protID = input("Enter protein ID in order to get its PDB ID: ")
+        pdbIDresults = morpho_genes[protID][1]
+        if len(pdbIDresults[0]) == 0:
+                return False
         else:
-            return False
+                return pdbIDresult
+# dont know if this result is right because question 2 doesnt want to give a result???:(
+pdbID()
 
 # 4. Create a function that prints the proteins IDs and the number of reported genes. The list should be sorted
 # by the number of genes. 
+numbersorted = []
 def sorted():
-    for morpho in morpho_genes:
-        numbersorted = morpho["Gene_names"].sort(len(morpho["Gene_names"]))
-        print (numbersorted)
-        print ([morpho["ID"] + [numbersorted]])
+        for morpho in morpho_genes:
+                numbersorted = morpho["Gene_names"].sort(len(morpho["Gene_names"]))
+                numbersorted += numbersorted
+                return numbersorted
+print (["ID"] + numbersorted)
+# this above function keeps saying numbersorted is not defined but it is defined inside the function
+        
 
 # 5. Create a function that prints a list of pairs of all the reported combinations of genes and PDBs
+output = ()
 def pairs():
-    from itertools import combinations
-    inputa = morpho["Gene_names"]
-    inputb = morpho["PDB"]
-    input = inputa + inputb
-    output = sum([map(list, combinations(input, i)) for i in range(len(input) + 1)], [])    
-    print (output)
+        from itertools import combinations
+        inputa = morpho["Gene_names"]
+        inputb = morpho["PDB"]
+        input = inputa + inputb
+        output = sum([map(list, combinations(input, i)) for i in range(len(input) + 1)], [])
+        output += output
+        return output
+pairs()
+#def pairs():
+        #print("Gene_name\tCross_ref_pdb")
+#for item in list3:
+#for item2 in item["Cross_ref_pdb"].split(";"):
+#if item2!="":
+#for item3 in item["Gene_name"].split():
+#print(item3,'\t\t',item2)
+#gene_names_paired_with_pdbs()
 
 
-
-# but the above approach will take too long so use the way of entering new movies
-#morphos = []
-#question = input("Do you want to enter Uniprot information? (Y/N) ")
-#while question == "Y":
-    #morpho = {}
-    #morpho["ID"] = input("Enter the ID of the protein: ")
-    ## morpho["Gene_names"] = input("Enter the gene names: ")
-    ## morpho["PDB"] = input("Enter the PDB links to protein: ")# both gene names and pdb can be lists so need to do it the same way as actors
-    #morpho["Length"] = int(input("Enter length of sequence: "))
-    #gene_names_str = input("Give gene names (comma separated): ")
-    #gene_name = ""
-    #gene_names = []
-    #for char in gene_names:
-        #if char != ",":
-            #gene_name = gene_name + char
-        #else:
-            #gene_names = gene_names + [gene_name]
-            #gene_name = "" # reinitializing the variable
-        #if gene_name != "":
-            #gene_names = gene_names + [gene_name]
-    #morpho["Gene_names"] = gene_names
-
-    #pdbs_str = input("Give the PDBs (code separated): ")
-    #pdb = ""
-    #pdbs = []
-    #for char in pdbs:
-        #if char != ",":
-            #pdb = pdb + char
-        #else:
-            #pdbs = pdbs + [pdb]
-            #pdb = ""
-        #if pdb != "":
-            #pdbs = pdbs + [pdb]
-    #morpho["PDB"] = pdbs
-    
-    #morphos += morpho
-        
-        
-    
-#print (morphos)
