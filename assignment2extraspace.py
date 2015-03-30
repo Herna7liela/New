@@ -33,11 +33,27 @@ for content in newlist3:
     newlist4 += [dic]
 #print (newlist4)
 
-## 2. Create a function that receives a gene name and returns the protein ID. 
+## 5. Create a function that prints a list of pairs of all the reported combinations of genes and PDBs
 
+# def combo_gene_pdb():
+counter1 = 0
+counter2 = 0
 for item in newlist4:
-    #if 'DAND4' in item["Gene_names"]:
+    #print (item)
     for item2 in item["Gene_names"]:
-        if 'DAND4' == item2:
-            print ("true", item["Entry"])
+        #print (item["Gene_names"])
+        for item3 in item["PDB ID"]:
+            #print (item["Gene_names"], ":", item["PDB ID"])
+            # can now use counter to change the index to print each combination
+            counter1 = counter1 + 1
+            counter2 = counter2 + 1
+            print (item["Gene_names"][counter1], ":", item["PDB ID"][counter2])
+
+
+
+
+
+
+# combo_gene_pdb()
+    
         

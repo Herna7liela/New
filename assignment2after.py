@@ -47,6 +47,7 @@ protIDshort()
 
 
 ## 2. Create a function that receives a gene name and returns the protein ID. 
+#def protID():
 gene_name = input("Enter a gene name to get protein ID (or space to exit): ")
 while gene_name != "":
     for item in newlist4:
@@ -55,19 +56,41 @@ while gene_name != "":
             if gene_name == item2:
                 print ("true", item["Entry"])   
     gene_name = input("Enter a gene name to get protein ID (or space to exit): ")
+# protID()
+
 # not getting the correct answer for it becuase its saying that the gene name entered is not defined  
     
 ## 3. Create a function that receives protein ID and returns the PDB IDs. If the protein doesn’t have PDBs
 ##    reported, the function should return False. 
-proteinID = input("Enter protein ID to recieve PDB ID (or space to exit): ")
-while proteinID != "":
-    for item in newlist4:
-        for item2 in item["Entry"]:
-            if proteinID == item2:
-                print (item["PDB ID"])
-                
-                # have to test this separately to be able to do it
+#def pdbID():
+#proteinID = input("Enter protein ID to receive PDB ID (or space to exit): ")
+#while proteinID != "":
+for item in newlist4:
+    #print (item)
+    for item2 in item["Entry"]:
+        #print (item["Entry"])
+        if '' == item2:
+            print (item["PDB ID"])
+        #else:
+            #print ("False")
     
     
-    proteinID = input("Enter protein ID to recieve PDB ID (or space to exit): ")
+   # proteinID = input("Enter protein ID to recieve PDB ID (or space to exit): ")
+# pdbID()
+   
+## 4. Create a function that prints the proteins IDs and the number of reported genes. The list should be sorted
+## by the number of genes.
+
+#sorted(newlist4, k=lambda, i:(len(item)[]))
+counter = 0
+for item in newlist4:
+    #print (item["Entry"])
+    ## now have to count the reported genes for each Entry
+    for i in item["Gene_names"]:
+        #print (item["Gene_names"])
+        counter = counter + 1 # i know there needs to be a way of counting the genes but what way??
+        print (counter)
+        
+# after the number of genes are counted and printed with the prot IDs,then
+# the data can be sorted according to the counts of genes.  
     
