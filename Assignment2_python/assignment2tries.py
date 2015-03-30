@@ -41,17 +41,27 @@ Q15465	SHH	3HO5;3M1N;3MXW;	462"""
     #print(listoflists) #[[],[],[]]
 
 # now have to make a list of dictionaries
-
-for line in text.split():
-    print (line) 
-contents = line.split('\t') 
+text = text.split('\n')
+for line in text[2:]:
     
-print (contents)
+    contents = line.split('\t')
+    print("ID", contents[0])
+    print("Gene_names: ", contents[1])
+    print ("PDB: ", contents[2])
+    print ("Length: ", contents[3])
     
-for item in contents:
-    item = contents.split(' ')
-print (item)   
+morpho1 = {
+    contents[1]
+    contents[2]
+}
+    
+    
+#print (contents)
+    
+#for item in contents:
+    #item = contents.split(' ')
+#print (item)   
 
-# now have to get a way to split all the different elements as tabs, spaces and ;
-# find way to get things in dictionaries with each under its own key:value pair
+## now have to get a way to split all the different elements as tabs, spaces and ;
+## find way to get things in dictionaries with each under its own key:value pair
         
