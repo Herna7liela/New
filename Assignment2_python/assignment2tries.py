@@ -51,9 +51,13 @@ for line in text[2:]:
     print ("Length: ", contents[3])
     
 morpho1 = {
-    contents[1]
-    contents[2]
+    "ID" : contents[0],
+    "Gene_names" : contents[1],
+    "PDB" : contents[2],
+    "Length" : contents[3],
 }
+
+print (morpho1)
     
     
 #print (contents)
