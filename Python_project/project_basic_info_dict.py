@@ -52,7 +52,7 @@ accession = read_gbfile[3][12:]
 print (accession)
 
 version = read_gbfile[4][12:21]
-print (version)
+print (version) # is it neccessary to split these two???
 
 gi = read_gbfile[4][22:]
 print (gi)
@@ -62,7 +62,9 @@ print (keywords)
 
 source = read_gbfile[6][12:]
 print (source)
-
+# organism is part of the source = look at the paper
 organism = read_gbfile[7][12:] + read_gbfile[8][12:] + read_gbfile[9][12:] + read_gbfile[10][12:]
 #organism = organism.split(";")
 print (organism) # not happy with this
+
+
