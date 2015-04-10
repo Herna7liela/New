@@ -82,7 +82,7 @@ if not os.path.exists("./codon_table.txt"):
                     print (read_gbfile)
                     
                     
-## still have to ask olivier to explain the stuff he said about the sys and os things when calling the program in the terminal
+
                 
 #maybe something in the lines of the following:
 complete_list = []
@@ -201,7 +201,7 @@ def translate_nucl_seq(gb, frame = 0):
             new_protein += yaay
             return new_protein
     
-def sequence_thingy(): # I dont get the handler thing Olivier keeps talking about so I put in another name
+def sequence_thingy(): 
     seq_range = input("Enter chosen range: ")
     if seq_range == "M":
         return "Continue"
@@ -273,14 +273,14 @@ while running:
                 l6 = "Number of References", None
                 l7 = "Number of Features", None
                 l8 = "="*70
-print(l1)
-print(l2)
-print(l3)
-print(l4)
-print(l5)
-print(l6)
-print(l7)
-print(l8)
+#print(l1)
+#print(l2)
+#print(l3)
+#print(l4)
+#print(l5)
+#print(l6)
+#print(l7)
+#print(l8)
 #print()
 
 
@@ -304,7 +304,7 @@ elif user_input == "M":
             print("Searching for the motif ", motifPrompt.lower() + "...")
             pass
 elif user_input == "T":
-    if translate_nucl_seq(gb, frame = 0) == "Conitnue":
+    if translate_nucl_seq(gb, frame = 0) == "Continue":
         continue
     pass
 elif user_input == "F":
@@ -313,6 +313,18 @@ elif user_input == "F":
     pass
 elif user_input == "E":
     # find a way to export the gbk file into fasta format
+    
+    ## the export can be done by using biopython by using the following
+    # from Bio import SeqIO
+    #record = SeqIO.read("yourGenbankFileDirectory/yourGenbankFile.gb","genbank")
+    #rawSequence = record.seq.tostring()
+    #nameSequence = record.features[0].qualifiers
+    #from Bio import SeqIO
+    #record = SeqIO.read("yourGenbankFileDirectory/yourGenbankFile.gb","genbank")
+    #rawSequenceList = [gene.extract(record.seq.tostring()) for gene in record.features]
+    #nameSequenceList = [gene.qualifiers for gene in record.features]
+    
+    ## still need a manual way of doing this
     pass
 elif user_input == "":
     print(genbank)
