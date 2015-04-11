@@ -57,7 +57,7 @@ genbank["SOURCE"] = source
 #R:References S:Sequence M:Motif T:Translate F:Features E:Export Q:Quit
 #Codon table
 import sys, os, re
-from urllib import request
+from urllib import sys
 codon_table = {}
 print ("Need to safe codon table from link in text file called codon_table.txt: https://popoolation.googlecode.com/svn-history/r179/trunk/syn-nonsyn/codon-table.txt")
 url = "https://popoolation.googlecode.com/svn-history/r179/trunk/syn-nonsyn/codon-table.txt" # this is the url the table was from
@@ -90,12 +90,13 @@ def over_lines(new_position, pattern = "REFERENCE", ref1 = 2, ref2 = 3, space_us
     possible_dict = {pattern:[]}
     if line.startswith(pattern):
         pat_value = line.split()
-        pat_key = data[0]
+        pat_key = pattern[0] # i had a variable called data but it said its not defined
         if "REFERENCE" in line:
-            reference_num = data[1]
+            reference_num = pattern[1]
             possible_dict[pattern].append({"REFERENCE_NUM": reference_num})
             ref_counter = 1
             while (lines[possible_dict + ref_counter].startswith(' '*ref1)) or (lines[possible_dict + ref_counter].startswith(' '*ref2)):
+                # above line have problems with int and dict to combine it
                 possible_lines = lines[new_position + ref_counter]
                 tyd_key = possible_lines[:space_used].strip()
                 tyd_value = possible_lines[space_used:].strip()
@@ -144,7 +145,7 @@ def features_thingy():
                 sequence += tyd_gbSeq
                 pass
             genbank["ORIGIN"] = sequence
-print (genbank["ORIGIN"])  
+#print (genbank["ORIGIN"])  
 
 def reference_thingy(): # olivier told me to add in a reference handler so I put it in a function in order to call it later on
     # but I then also combined the handler with being able to call the M command in the terminal and get an output = this 
@@ -291,11 +292,11 @@ if user_input == "Q":
 elif user_input == "R":
 #Do reference stuff
     if reference_thingy() == "Continue":
-        continue # keeps saying that this thing is not properly in the loop
+        pass # kept saying that the "Continue" was not properly in the loop
 elif user_input == "S":
 #Do sequence stuff
     if sequence_thingy() == "Continue":
-        continue
+        pass # changed most continue to pass to be able to keep running the function because the continue kept saying it was nt in the loop
 elif user_input == "M":
     if motif_thingy() == "Continue":
         motifPrompt = input("Motif: ")
@@ -305,12 +306,10 @@ elif user_input == "M":
             pass
 elif user_input == "T":
     if translate_nucl_seq(gb, frame = 0) == "Continue":
-        continue
-    pass
+        pass
 elif user_input == "F":
     if features_thingy() == "Continue":
-        continue
-    pass
+        pass
 elif user_input == "E":
     # find a way to export the gbk file into fasta format
     
