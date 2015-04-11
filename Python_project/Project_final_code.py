@@ -59,7 +59,7 @@ genbank["SOURCE"] = source
 import sys, os, re
 from urllib import sys
 codon_table = {}
-print ("Need to safe codon table from link in text file called codon_table.txt: https://popoolation.googlecode.com/svn-history/r179/trunk/syn-nonsyn/codon-table.txt")
+print ("Need to save codon table from link in text file called codon_table.txt: https://popoolation.googlecode.com/svn-history/r179/trunk/syn-nonsyn/codon-table.txt")
 url = "https://popoolation.googlecode.com/svn-history/r179/trunk/syn-nonsyn/codon-table.txt" # this is the url the table was from
 if not os.path.exists("./codon_table.txt"):
     urlpage = request.urlopen(url)
