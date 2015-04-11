@@ -6,8 +6,6 @@
 #import sys
 #print (sys.argv)
 
-# can put the last line in the first to be able to make it achievable everywhere
-
 gbfile = open('sequence.gb', 'r')
 read_gbfile = gbfile.readlines()
 #print (read_gbfile)
@@ -52,9 +50,6 @@ genbank["SOURCE"] = source
 
 #print (genbank)
 
-
-# References and features and the sequence have to come in first before this
-#R:References S:Sequence M:Motif T:Translate F:Features E:Export Q:Quit
 #Codon table
 import sys, os, re
 from urllib import sys
@@ -82,9 +77,6 @@ if not os.path.exists("./codon_table.txt"):
                     print (read_gbfile)
                     
                     
-
-                
-#maybe something in the lines of the following:
 complete_list = []
 def over_lines(new_position, pattern = "REFERENCE", ref1 = 2, ref2 = 3, space_used = 12): # olivier explained the ref1 and ref2 part
     possible_dict = {pattern:[]}
@@ -147,9 +139,7 @@ def features_thingy():
             genbank["ORIGIN"] = sequence
 #print (genbank["ORIGIN"])  
 
-def reference_thingy(): # olivier told me to add in a reference handler so I put it in a function in order to call it later on
-    # but I then also combined the handler with being able to call the M command in the terminal and get an output = this 
-    # I did becuase I wasnt completely sure what he meant by the handler but I still kept the name as is
+def reference_thingy(): 
     number_references = 0
     authors = []
     titles = []
@@ -179,7 +169,7 @@ def reference_thingy(): # olivier told me to add in a reference handler so I put
                         if M_command == "M":
                             return "Continue"
                         return None
-                    class Genbank: # ask eggies again for why I had to put this in here???
+                    class Genbank: 
                         ##Container for genbank record # conatiner idea from egbert and he also told me to use _init_
                         def __init__(gb, sequence, references, features, accession, length):
                             gb.sequence = sequence
