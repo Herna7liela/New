@@ -22,6 +22,7 @@ print(codonstry_dict)
 
 count = 0
 c = len(DNA)
+possible_codons = []
 for c in codons_dict:
     if c in DNA:
         print(c)
