@@ -157,7 +157,7 @@ def cross(a,b):
     return
     
 ----------------------------------------------------------------------------------------------------------
-# Question 3 (first try) = please also look at second try
+# Question 3 (first try) = please rather look at the second try
 import random
 import sys
 import os
@@ -236,6 +236,9 @@ for three in codons:
 codon_dict = {}
 codon_dict[codons] = times
 print(codon_dict)
+
+print("CODON  TIMES\n")
+print(c,count)
 
 ---------------------------------------------------------------------------------------------------------
 # Question 4
