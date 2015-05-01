@@ -8,7 +8,7 @@ DNA = input("Enter a DNA sequence: ").upper()
 codon_table = open('codon_table.txt', 'r+')
 readcodons = codon_table.readlines().strip()
 
-codonstry_dict = {}
+codonstry_dict = {} # just created to see differences in output between two dictionaries
 codons_dict = {}
 #def codon_count(DNA):
 for codon in readcodons:
@@ -27,6 +27,10 @@ for c in codons_dict:
         print(c)
         count +=1
 codons_dict["CODON"] = count
+
+# to sort the values
+values = sort(codons_dict.values())
+sorted_times = codons_dict[:][1].sort()
     
 print("CODON  TIMES\n")
 print(c,count)
